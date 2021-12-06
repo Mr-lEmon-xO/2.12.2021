@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <windows.h>
+using namespace std;
+
+void polipoop(char polipop[128], int n) {
+ bool h = false;
+ for (int i = 0; i < n / 2; i++)
+	{
+ if (polipop[i] != polipop[n - 1 - i]) {
+ h = true;
+		}
+	}
+	if (h == true) {
+		cout << " Не Палиндром";
+	}
+	else
+	{
+		cout << " Палиндром";
+	}
+
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	char polipop[32] = "";
+	cin.getline(polipop, 32);
+	int n = strlen(polipop);
+	polipoop(polipop, n);
+  }
